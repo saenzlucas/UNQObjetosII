@@ -1,0 +1,1 @@
+No, no fue necesario modificar la clase 'Empresa' ya que 'Contratado' extiende de 'Empleado' y 'Empresa' entiende 'Empleado'.
