@@ -2,16 +2,20 @@ package Unit.Two.UML;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Empleado {
-	String nombre;
-	String direccion;
+	protected String nombre;
+	protected String direccion;
 	protected String estadoCivil;
-	LocalDate fechaDeNacimiento;
+	protected LocalDate fechaDeNacimiento;
 	protected double sueldoBasico;
+	protected List<Concepto> bonos = new ArrayList<>();
+	protected List<Concepto> retenciones = new ArrayList<>();
 	
 	public abstract double calcularSueldoBruto();
-	
+
 	public abstract double calcularRetenciones();
 	
 	public abstract double calcularSueldoNeto();
@@ -22,6 +26,14 @@ public abstract class Empleado {
 
 	public String getDireccion() {
 		return direccion;
+	}
+	
+	public List<Concepto> getBonos() {
+		return bonos;
+	}
+	
+	public List<Concepto> getRetenciones() {
+		return retenciones;
 	}
 
 	protected int calcularEdad () {
